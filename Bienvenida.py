@@ -6,6 +6,6 @@ def bienvenida(nombre):
 
 myname=st.text_input("Nombre: ")
 
-if (myname):
+if (st.button("Search")):
     mensaje=bienvenida(myname)
     st.write(mensaje)
