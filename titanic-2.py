@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd 
 import datetime
 
-titanic_link = 'https://raw.githubusercontent.com/mwaskom/seaborn-data/master/titanic.csv'
+titanic_link = "titanic-2.csv"
 titanic_data = pd.read_csv(titanic_link)
 
 # Create the title for the web app
@@ -15,9 +15,8 @@ sidebar.write("You can add any elements to the sidebar.")
 
 # ask user the current date
 today = datetime.date.today()
-today_date = sidebar.date_input('Cual es tu cumple : ', today)
-#st.success('tu cumple es : `%s` felicidades ...' % (today_date))
-st.success(f'tu cumple es: {today_date} felicidades...') 
+today_date = sidebar.date_input('Fecha Deseada: ', today)
+st.success(f'Fecha seleccionada: {today_date}') 
 
 # Display the content of the dataset if checkbox is true
 st.header("Titanic Dataset")
