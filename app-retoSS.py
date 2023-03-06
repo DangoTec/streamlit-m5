@@ -20,7 +20,7 @@ sidebar = st.sidebar
 sidebar.title("Selección de Datos")
 
 #---READ DATA---
-@st.cache_data
+@st.cache
 def load_data():
     dbAlumnos = db.collection("Alumnos")
     data_ref = list(db.collection(u'Alumnos').stream())
