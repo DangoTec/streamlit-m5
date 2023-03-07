@@ -89,14 +89,14 @@ if submit_button or st.session_state.load_state:
     st.markdown("""---""")
 
     #Salvar datos en excel
-    st.subheader("Salvar Datos")
+    st.subheader("Exportar Datos")
     df=pd.DataFrame(alumnos)
     @st.cache
     def convert_df(df):
         return df.to_csv(index=False).encode('utf-8')
     csv = convert_df(df)
     st.download_button(
-        label="Salvar Datos",
+        label="Exportar",
         data=csv,
         file_name=f'Alumnos_{OSFexp}_2023.csv',
         mime='text/csv',
