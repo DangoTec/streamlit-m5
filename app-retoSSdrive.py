@@ -1,16 +1,7 @@
 import pandas as pd
 import numpy as np
 import streamlit as st
-from google.cloud import firestore
-from google.oauth2 import service_account
-#pip install firebase-admin
 #streamlit run .\OSF_Streamlit.py
-
-#Lectura en modo producción (segura)
-import json
-key_dict = json.loads(st.secrets["textkey"])
-creds = service_account.Credentials.from_service_account_info(key_dict)
-db = firestore.Client(credentials=creds, project="m3-project-demo")
 
 #---PAGE CONFIG---
 st.set_page_config(page_title="Alumnos Inscritos SS FJ2023",
